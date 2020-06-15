@@ -1,0 +1,25 @@
+.bttn-wptbls {
+	color:#ffffff !important;
+	background-color: #0077cf;
+	padding: 8px 16px;
+	margin: 0 auto;
+}
+.bttn-wptbls: hover {
+	background-color: #00376D;
+}
+.wpdt-cell {
+	text-align:center !important;
+}
+.thumbnail {
+	display:none;
+}
+.search .elementor-post__thumbnail__link i, .archive .elementor-post__thumbnail__link i {
+	font-size: calc(1.25vw + 1.25vh + 1.25vmin);
+	padding: calc(0.5vw + 0.5vh + 0.5vmin);
+	border: 3px solid #0077cf;
+	border-radius: 50%;
+	background-color:#fff;
+}
+.search .elementor-post__thumbnail__link:hover i, .archive .elementor-post__thumbnail__link:hover i {
+	border: 3px solid #FF6A14;
+}
