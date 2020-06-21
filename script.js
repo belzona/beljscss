@@ -92,7 +92,7 @@ jQuery( function( $ ) {
 				}
 			}
 			$("#docs-downloads").html(docs.join("")); 
-		}
+		});
 	}
 	/* function to load documents accordion */
 
