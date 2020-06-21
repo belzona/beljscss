@@ -77,15 +77,15 @@ jQuery( function( $ ) {
 			/* loop through the documents */
 			$.each(data, function(key,val){
 				if(val.iso_code == iso && val.formulation_number){
-					docs.push("<div class=\"elementor-accordion-item\"><div id=\"elementor-tab-title-1331\" class=\"elementor-tab-title\" data-tab=\"" + int_doc + "\" role=\"tab\" aria-controls=\"elementor-tab-content-1331\"><span class=\"elementor-accordion-icon elementor-accordion-icon-left\" aria-hidden=\"true\"><span class=\"elementor-accordion-icon-closed\"><i class=\"fas fa-plus\"></i></span><span class=\"elementor-accordion-icon-opened\"><i class=\"fas fa-minus\"></i></span></span><a class=\"elementor-accordion-title\" href=\"\">FN" + val.formulation_number + "</a></div><div id=\"elementor-tab-content-1331\" class=\"elementor-tab-content elementor-clearfix\" data-tab=\"" + int_doc + "\" role=\"tabpanel\" aria-labelledby=\"elementor-tab-title-1331\" style=\"display: none;\">");
+					docs.push("<div class=\"elementor-accordion-item\"><div id=\"elementor-tab-title-1331\" class=\"elementor-tab-title\" data-tab=\"" + int_doc + "\" role=\"tab\" aria-controls=\"elementor-tab-content-1331\"><span class=\"elementor-accordion-icon elementor-accordion-icon-left\" aria-hidden=\"true\"><span class=\"elementor-accordion-icon-closed\"><i class=\"fas fa-plus\"></i></span><span class=\"elementor-accordion-icon-opened\"><i class=\"fas fa-minus\"></i></span></span><a class=\"elementor-accordion-title\" href=\"\">FN" + val.formulation_number + "</a></div><div id=\"elementor-tab-content-1331\" class=\"elementor-tab-content elementor-clearfix\" data-tab=\"" + int_doc + "\" role=\"tabpanel\" aria-labelledby=\"elementor-tab-title-1331\" style=\"display: block;\">");
 					if(val.IF){
-		            	docs.push("<a href=\"" + val.IF + "\">Instructions for Use</a>");
+		            	docs.push("<a href=\"" + val.IF + "\">Instructions for Use</a><br>");
 		            }
 		            if(val.PSS){
-		            	docs.push("<a href=\"" + val.PSS + "\">Product Specification Sheet</a>");
+		            	docs.push("<a href=\"" + val.PSS + "\">Product Specification Sheet</a><br>");
 		            }
 		            if(val.CR){
-		            	docs.push("<a href=\"" + val.CR + "\">Chemical Resistant Chart</a>");
+		            	docs.push("<a href=\"" + val.CR + "\">Chemical Resistant Chart</a><br>");
 		            }
 		            docs.push("</div></div>");
 		            int_doc = int_doc + 1;
