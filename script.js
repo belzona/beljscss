@@ -49,4 +49,15 @@ jQuery( function( $ ) {
 			});
 		}
 	}
+	/* languages for product documentation */
+	if($(".single-product_information").length){
+	    $.getJSON( "https://bel.belzona.com/assets/xml/productdocsjson.aspx?langs=all", function(data) {
+	     	var items = [];
+	     	$.each( data, function( key, val ) {
+	        	items.push( "<option value='" + val.iso_code + "'>" + val.doc_language + "</option>" );
+	      	});
+	      	/* load languages into select element */
+	      	$("#docs-lang-select").html(items.join( "" ));  
+	    });
+	}
 } );
