@@ -53,8 +53,9 @@ jQuery( function( $ ) {
 	if($(".single-product_information").length){
 	    $.getJSON( "https://bel.belzona.com/assets/xml/productdocsjson.aspx?langs=all", function(data) {
 	     	var items = [];
+	     	items.push( "<option value=\"\">Language</option>" );
 	     	$.each( data, function( key, val ) {
-	        	items.push( "<option value='" + val.iso_code + "'>" + val.doc_language + "</option>" );
+	        	items.push( "<option value=\"" + val.iso_code + "\">" + val.doc_language + "</option>" );
 	      	});
 	      	/* load languages into select element */
 	      	$("#docs-lang-select").html(items.join( "" ));  
