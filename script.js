@@ -70,6 +70,7 @@ jQuery( function( $ ) {
 	/* function to load documents accordion */
 	$.fn.get_docs = function(iso, prod)
 	{
+		$(".elementor-widget-accordion").css("display", "block");
 		var api_url = "https://bel.belzona.com/assets/xml/productdocsjson.aspx?prod=";
 		$.getJSON( api_url + prod, function(data) {
 			var int_doc = 1;
