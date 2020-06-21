@@ -90,7 +90,7 @@ jQuery( function( $ ) {
 		            docs.push("</div></div>");
 		            int_doc = int_doc + 1;
 				}
-			}
+			});
 			$("#docs-downloads").html(docs.join("")); 
 		});
 	}
