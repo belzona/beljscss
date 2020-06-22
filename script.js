@@ -101,7 +101,7 @@ jQuery( function( $ ) {
 			});
 			$("#docs-downloads").html(docs.join(""));
 		});
-		setTimeout(function(){ $("#primary-fn").detach().prependTo("#docs-downloads"); }, 500);
+		setTimeout(function(){ $("#primary-fn").detach().prependTo("#docs-downloads"); }, 3000);
 		
 	}
 	/* function to load documents accordion */
