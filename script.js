@@ -83,17 +83,17 @@ jQuery( function( $ ) {
 					} else { docprim = ""; }
 					docs.push("<div id=\"" + docprim + "\" class=\"fn-box elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title " + docprim + "\"><a class=\"elementor-accordion-title fn-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active elementor-widget-icon-list\" style=\"display: block;\"><ul clas=\"elementor-icon-list-items\">");
 					if(val.IF){
-		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.IF + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">IFU</span></a></li>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_new\" href=\"" + val.IF + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">IFU</span></a></li>");
 		            }
 		            if(val.PSS){
-		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.PSS + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">PSS</span></a></li>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_new\" href=\"" + val.PSS + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">PSS</span></a></li>");
 		            }
 		            if(val.CR){
-		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.CR + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">CRC</span></a></li>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_new\" href=\"" + val.CR + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">CRC</span></a></li>");
 		            }
 		            if(val.SD){
 		            	$.each(val.SD, function(k,v){
-		                	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + v.doc_url + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-exclamation-triangle\"></i></span><span class=\"elementor-icon-list-text\">" + v.doc_name + "</span></a></li>");
+		                	docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_new\" href=\"" + v.doc_url + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-exclamation-triangle\"></i></span><span class=\"elementor-icon-list-text\">" + v.doc_name + "</span></a></li>");
 		            	});
 		            }
 		            docs.push("</div></div></div></div></div></ul>");
@@ -101,7 +101,8 @@ jQuery( function( $ ) {
 			});
 			$("#docs-downloads").html(docs.join(""));
 		});
-		$("#primary-fn").detach().prependTo('#docs-downloads');
+		setTimeout(function(){ $("#primary-fn").detach().prependTo("#docs-downloads"); }, 500);
+		
 	}
 	/* function to load documents accordion */
 
