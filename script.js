@@ -73,20 +73,23 @@ jQuery( function( $ ) {
 		$(".elementor-widget-accordion").css("display", "block");
 		var api_url = "https://bel.belzona.com/assets/xml/productdocsjson.aspx?prod=";
 		$.getJSON( api_url + prod, function(data) {
-			var int_doc = 1;
+			var docprim = "";
 			var docs = [];
 			/* loop through the documents */
 			$.each(data, function(key,val){
 				if(val.iso_code == iso && val.formulation_number){
-					docs.push("<div class=\"elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title\"><a class=\"elementor-accordion-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active elementor-widget-icon-list\" style=\"display: block;\"><ul clas=\"elementor-icon-list-items\">");
+					if(val.is_primary == true){
+						docprim = "primary-fn";
+					} else { docprim = ""; }
+					docs.push("<div class=\"elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title " + docprim + "\"><a class=\"elementor-accordion-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active elementor-widget-icon-list\" style=\"display: block;\"><ul clas=\"elementor-icon-list-items\">");
 					if(val.IF){
-		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.IF + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">Instructions for Use</span></a></li>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.IF + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">IFU</span></a></li>");
 		            }
 		            if(val.PSS){
-		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.PSS + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">Product Specification Sheet</span></a></li>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.PSS + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">PSS</span></a></li>");
 		            }
 		            if(val.CR){
-		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.CR + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">Chemical Resistant Chart</span></a></li>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.CR + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">CRC</span></a></li>");
 		            }
 		            if(val.SD){
 		            	$.each(val.SD, function(k,v){
@@ -94,7 +97,6 @@ jQuery( function( $ ) {
 		            	});
 		            }
 		            docs.push("</div></div></div></div></div></ul>");
-		            int_doc = int_doc + 1;
 				}
 			});
 			$("#docs-downloads").html(docs.join("")); 
