@@ -81,7 +81,7 @@ jQuery( function( $ ) {
 					if(val.is_primary == true){
 						docprim = "primary-fn";
 					} else { docprim = ""; }
-					docs.push("<div class=\"fn-box elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title " + docprim + "\"><a class=\"elementor-accordion-title fn-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active elementor-widget-icon-list\" style=\"display: block;\"><ul clas=\"elementor-icon-list-items\">");
+					docs.push("<div id=\"" + docprim + "\" class=\"fn-box elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title " + docprim + "\"><a class=\"elementor-accordion-title fn-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active elementor-widget-icon-list\" style=\"display: block;\"><ul clas=\"elementor-icon-list-items\">");
 					if(val.IF){
 		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.IF + "\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-download\"></i></span><span class=\"elementor-icon-list-text\">IFU</span></a></li>");
 		            }
@@ -101,6 +101,7 @@ jQuery( function( $ ) {
 			});
 			$("#docs-downloads").html(docs.join(""));
 		});
+		$("#primary-fn").detach().prependTo('#docs-downloads');
 	}
 	/* function to load documents accordion */
 
