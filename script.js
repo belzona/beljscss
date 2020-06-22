@@ -78,22 +78,22 @@ jQuery( function( $ ) {
 			/* loop through the documents */
 			$.each(data, function(key,val){
 				if(val.iso_code == iso && val.formulation_number){
-					docs.push("<div class=\"elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title\"><a class=\"elementor-accordion-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active\" style=\"display: block;\">");
+					docs.push("<div class=\"elementor-element elementor-widget elementor-widget-accordion\"><div class=\"elementor-widget-container\"><div class=\"elementor-accordion\"><div class=\"elementor-accordion-item\"><div class=\"elementor-tab-title\"><a class=\"elementor-accordion-title\">FN" + val.formulation_number + "</a></div><div class=\"elementor-tab-content elementor-clearfix elementor-active\" style=\"display: block;\"><ul clas=\"elementor-icon-list-items\">");
 					if(val.IF){
-		            	docs.push("<a href=\"" + val.IF + "\">Instructions for Use</a><br>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.IF + "\">Instructions for Use</a></li>");
 		            }
 		            if(val.PSS){
-		            	docs.push("<a href=\"" + val.PSS + "\">Product Specification Sheet</a><br>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.PSS + "\">Product Specification Sheet</a></li>");
 		            }
 		            if(val.CR){
-		            	docs.push("<a href=\"" + val.CR + "\">Chemical Resistant Chart</a><br>");
+		            	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + val.CR + "\">Chemical Resistant Chart</a></li>");
 		            }
 		            if(val.SD){
 		            	$.each(val.SD, function(k,v){
-		                	docs.push("<a href=\"" + v.doc_url + "\">" + v.doc_name + "</a><br>");
+		                	docs.push("<li class=\"elementor-icon-list-item\"><a href=\"" + v.doc_url + "\">" + v.doc_name + "</a></li>");
 		            	});
 		            }
-		            docs.push("</div></div></div></div></div>");
+		            docs.push("</div></div></div></div></div></ul>");
 		            int_doc = int_doc + 1;
 				}
 			});
