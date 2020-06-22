@@ -100,10 +100,6 @@ jQuery( function( $ ) {
 				}
 			});
 			$("#docs-downloads").html(docs.join(""));
-			$("div.fn-box").sort(function (a,b){
-				var fnboxes = $(a).find("a.fn-title").text() > $(b).find("a.fn-title").text();
-				$("#docs-downloads").html(fnboxes);
-			});
 		});
 	}
 	/* function to load documents accordion */
