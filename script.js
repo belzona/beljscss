@@ -104,7 +104,7 @@ jQuery( function( $ ) {
 		});
 		setTimeout(function(){ 
 			$("#primary-fn").detach().prependTo("#docs-downloads");
-			$("#docs-downloads").show();
+			$("#docs-downloads").show(); 
 		}, 1000);
 		
 	}
