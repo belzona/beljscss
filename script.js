@@ -70,7 +70,7 @@ jQuery( function( $ ) {
 	/* function to load documents accordion */
 	$.fn.get_docs = function(iso, prod)
 	{
-		$("#docs-downloads").html("").hide();
+		$("#docs-downloads").html("");
 		$(".elementor-widget-accordion").css("display", "block");
 		var api_url = "https://bel.belzona.com/assets/xml/productdocsjson.aspx?prod=";
 		$.getJSON( api_url + prod, function(data) {
@@ -103,8 +103,7 @@ jQuery( function( $ ) {
 			$("#docs-downloads").html(docs.join(""));
 		});
 		setTimeout(function(){ 
-			$("#primary-fn").detach().prependTo("#docs-downloads");
-			$("#docs-downloads").show(); 
+			$("#primary-fn").detach().prependTo("#docs-downloads"); 
 		}, 1000);
 		
 	}
