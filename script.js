@@ -6,6 +6,9 @@ jQuery( function( $ ) {
 	if($(".single-literature").length){
 		$("#menu-item-615").addClass("current-menu-ancestor current-menu-parent");
 	}
+	if($(".single-product_information").length){
+		$("#menu-item-95").addClass("current-menu-ancestor current-menu-parent");
+	}
 /* icons for search results */
 	if($(".search").length || $(".archive").length){
 		if($(".type-belzona_report").length){
