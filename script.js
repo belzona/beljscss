@@ -52,7 +52,7 @@ jQuery( function( $ ) {
 			});
 		}
 		if($(".type-system_leaflet").length){
-			$(".type-technical_mailing").each(function(index){
+			$(".type-system_leaflet").each(function(index){
 				var thelnk = $(this).find("a").attr("href");
 				$('<a>',{
 				    class: 'elementor-post__thumbnail__link no-lightbox',
