@@ -1,6 +1,6 @@
 jQuery( function( $ ) {
 /* breadcrumb */
-	if($(".single-belzona_report").length || $(".single-testing_report").length || $(".single-approval").length){
+	if($(".single-belzona_report").length || $(".single-testing_report").length || $(".single-approval").length || $(".single-system_leaflet").length){
 		$("#menu-item-77").addClass("current-menu-ancestor current-menu-parent");
 	}
 	if($(".single-literature").length){
