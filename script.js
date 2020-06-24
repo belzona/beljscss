@@ -51,6 +51,16 @@ jQuery( function( $ ) {
 				}).prependTo($(this));
 			});
 		}
+		if($(".type-system_leaflet").length){
+			$(".type-technical_mailing").each(function(index){
+				var thelnk = $(this).find("a").attr("href");
+				$('<a>',{
+				    class: 'elementor-post__thumbnail__link no-lightbox',
+				    href: thelnk,
+				    html: '<div><i aria-hidden=\"true\" class=\"fas fa-schlix\"></i></div>'
+				}).prependTo($(this));
+			});
+		}
 	}
 	/* languages for product documentation */
 	if($(".single-product_information").length){
