@@ -57,7 +57,7 @@ jQuery( function( $ ) {
 				$('<a>',{
 				    class: 'elementor-post__thumbnail__link no-lightbox',
 				    href: thelnk,
-				    html: '<div><i aria-hidden=\"true\" class=\"fas fa-schlix\"></i></div>'
+				    html: '<div><i aria-hidden=\"true\" class=\"fas fa-leaf\"></i></div>'
 				}).prependTo($(this));
 			});
 		}
