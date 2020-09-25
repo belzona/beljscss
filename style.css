@@ -54,10 +54,13 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: #FF6A14 transparent transparent transparent;
 }
 
 .el-tooltip:hover .el-tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+.elementor-icon-box-description em:last-child {
+	display: none;
 }
