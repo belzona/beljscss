@@ -30,6 +30,7 @@
 }
 
 .el-tooltip .el-tooltiptext {
+  font-size: 80%;
   visibility: hidden;
   width: 200px;
   background-color: #FF6A14;
