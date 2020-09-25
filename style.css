@@ -31,7 +31,7 @@
 
 .el-tooltip .el-tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 200px;
   background-color: #555;
   color: #fff;
   text-align: center;
