@@ -61,6 +61,6 @@
   visibility: visible;
   opacity: 1;
 }
-.elementor-icon-box-description em:last-child {
+.elementor-icon-box-description span:last-child em {
 	display: none;
 }
