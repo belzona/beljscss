@@ -75,7 +75,7 @@ jQuery( function( $ ) {
 	/* languages for product documentation */
 	if($(".single-product_information").length){
 		var prod = $("#prod_number").val();
-		$.getJSON( "https://bel.belzona.com/assets/xml/productdocsjson.aspx?langs=all", function(data) {
+		$.getJSON( "https://bel.belzona.com/assets/xml/productdocsjsonMD5.aspx?langs=all", function(data) {
 			 var items = [];
 			 items.push( "<option value=\"\">Language</option>" );
 			 $.each( data, function( key, val ) {
