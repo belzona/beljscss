@@ -95,7 +95,7 @@ jQuery( function( $ ) {
 	{
 		$("#docs-downloads").html("");
 		$(".elementor-widget-accordion").css("display", "block");
-		var api_url = "https://bel.belzona.com/assets/xml/productdocsjson.aspx?prod=";
+		var api_url = "https://bel.belzona.com/assets/xml/productdocsjsonMD5.aspx?prod=";
 		$.getJSON( api_url + prod, function(data) {
 			var docprim = "";
 			var docs = [];
