@@ -79,7 +79,7 @@ jQuery( function( $ ) {
 			 var items = [];
 			 items.push( "<option value=\"\">Language</option>" );
 			 $.each( data, function( key, val ) {
-				items.push( "<option class=\"wp-exclude-emoji\" value=\"" + val.iso_code + "\">" + val.iso_flags[0].em_flag + val.doc_language + "</option>" );
+				items.push( "<option class=\"wp-exclude-emoji\" value=\"" + val.iso_code + "\">" + val.iso_flags[0].em_flag + "&nbsp;" + val.doc_language + "</option>" );
 			  });
 			  /* load languages into select element */
 			  $("#docs-lang-select").html(items.join( "" ));  
