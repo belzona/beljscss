@@ -11,9 +11,9 @@ jQuery( function( $ ) {
 	}
 	/* languages for product documentation */
 	if($(".single-product_information").length){
-		alert($("#belapiurl").text());
+		var belapiurl = $("#belapiurl").text();
 		var prod = $("#prod_number").val();
-		$.getJSON( "https://bel.belzona.com/assets/xml/productdocsjsonMD5.aspx?langs=all", function(data) {
+		$.getJSON( belapiurl + "?langs=all", function(data) {
 			 var items = [];
 			 items.push( "<option value=\"\">Language</option>" );
 			 $.each( data, function( key, val ) {
@@ -33,7 +33,7 @@ jQuery( function( $ ) {
 	{
 		$("#docs-downloads").html("");
 		$(".elementor-widget-accordion").css("display", "block");
-		var api_url = "https://bel.belzona.com/assets/xml/productdocsjsonMD5.aspx?prod=";
+		var api_url = belapiurl + "?prod=";
 		$.getJSON( api_url + prod, function(data) {
 			var docprim = "";
 			var docs = [];
