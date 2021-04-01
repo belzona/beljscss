@@ -10,6 +10,7 @@ jQuery( function( $ ) {
 		$("#menu-item-95").addClass("current-menu-ancestor current-menu-parent");
 	}
 /* icons for search results */
+/**** removed for proper styling
 	if($(".search").length || $(".archive").length){
 		if($(".type-belzona_report").length){
 			$(".type-belzona_report").each(function(index){
@@ -72,6 +73,7 @@ jQuery( function( $ ) {
 			});
 		}
 	}
+*******/
 	/* languages for product documentation */
 	if($(".single-product_information").length){
 		var prod = $("#prod_number").val();
