@@ -33,8 +33,8 @@ jQuery( function( $ ) {
 	{
 		$("#docs-downloads").html("Loading documents...");
 		$(".elementor-widget-accordion").css("display", "block");
-		var api_url = belapiurl + "?prod=";
-		$.getJSON( api_url + prod, function(data) {
+		var api_url = belapiurl + "?prod=" + prod + "&dlang=" + iso;
+		$.getJSON( api_url, function(data) {
 			var docprim = "";
 			var docs = [];
 			/* loop through the documents */
