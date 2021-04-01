@@ -18,11 +18,9 @@
 	padding: calc(0.25vw + 0.25vh + 0.25vmin);
 	border: 1px solid #0077cf;
 	border-radius: 5px;
-	background-color:#fff;
+	background-color:#eee;
 }
-.search .elementor-post__thumbnail__link:hover i, .archive .elementor-post__thumbnail__link:hover i {
-	border: 1px solid #FF6A14;
-}
+
 .el-tooltip {
   position: relative;
   display: inline-block;
