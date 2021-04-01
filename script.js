@@ -31,7 +31,7 @@ jQuery( function( $ ) {
 	/* function to load documents accordion */
 	$.fn.get_docs = function(iso, prod)
 	{
-		$("#docs-downloads").html("");
+		$("#docs-downloads").html("Loading documents...");
 		$(".elementor-widget-accordion").css("display", "block");
 		var api_url = belapiurl + "?prod=";
 		$.getJSON( api_url + prod, function(data) {
