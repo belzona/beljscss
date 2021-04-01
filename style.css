@@ -16,8 +16,8 @@
 .search .elementor-post__thumbnail__link i, .archive .elementor-post__thumbnail__link i {
 	font-size: calc(1.25vw + 1.25vh + 1.25vmin);
 	padding: calc(0.5vw + 0.5vh + 0.5vmin);
-	border: 3px solid #0077cf;
-	border-radius: 50%;
+	border: 1px solid #0077cf;
+	border-radius: 5px;
 	background-color:#fff;
 }
 .search .elementor-post__thumbnail__link:hover i, .archive .elementor-post__thumbnail__link:hover i {
