@@ -14,7 +14,7 @@
 	display:none;
 }
 .search .elementor-post__thumbnail__link i, .archive .elementor-post__thumbnail__link i {
-	font-size: calc(1.25vw + 1.25vh + 1.25vmin);
+	font-size: calc(1vw + 1vh + 1vmin);
 	padding: calc(0.25vw + 0.25vh + 0.25vmin);
 	border: 1px solid #0077cf;
 	border-radius: 5px;
