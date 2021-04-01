@@ -21,7 +21,7 @@
 	background-color:#fff;
 }
 .search .elementor-post__thumbnail__link:hover i, .archive .elementor-post__thumbnail__link:hover i {
-	border: 3px solid #FF6A14;
+	border: 1px solid #FF6A14;
 }
 .el-tooltip {
   position: relative;
