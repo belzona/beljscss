@@ -91,4 +91,9 @@ jQuery( function( $ ) {
     		}
 	}
 	/* delete cookies function */
+	/* call the delete cookies function */
+	$("#log-out-button").click(function(){
+		$.fn.del_cookies();
+		window.location.href = "https://el.belzona.com/";
+	});
 } );
