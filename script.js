@@ -93,7 +93,10 @@ jQuery( function( $ ) {
 	/* delete cookies function */
 	/* call the delete cookies function */
 	$("#log-out-button").click(function(){
-		$.fn.del_cookies();
-		window.location.href = "https://el.belzona.com/";
+		var m = confirm("Are you sure you want to logout?");
+		if(m == true){
+			$.fn.del_cookies();
+			window.location.href = "https://el.belzona.com/";
+		}
 	});
 } );
