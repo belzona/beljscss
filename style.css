@@ -61,7 +61,7 @@
   display: none;
 }
 
-#docs-downloads small {
+#docs-downloads ul li small {
   position: absolute;
-  right = 0pt;
+  right = 0;
 }
