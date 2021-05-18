@@ -58,5 +58,10 @@
   opacity: 1;
 }
 .elementor-icon-box-description span:last-child em {
-	display: none;
+  display: none;
+}
+
+#docs-downloads small {
+  position: absolute;
+  right = 0pt;
 }
