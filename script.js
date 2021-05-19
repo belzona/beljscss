@@ -12,8 +12,7 @@ jQuery( function( $ ) {
 	/* languages for product documentation */
 	if($(".single-product_information").length){
 		var belapiurl = $("#belapiurl").text();
-		// var belapilang = $("#bel_dlang").text();
-		var belapilang = dlang;
+		var belapilang = $("#bel_dlang").text();
 		var prod = $("#prod_number").val();
 		$.getJSON( belapiurl + "?langs=all", function(data) {
 			 var items = [];
