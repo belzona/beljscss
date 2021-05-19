@@ -12,6 +12,7 @@ jQuery( function( $ ) {
 	/* languages for product documentation */
 	if($(".single-product_information").length){
 		var belapiurl = $("#belapiurl").text();
+		var belapiland = $("#bel_dlang").text();
 		var prod = $("#prod_number").val();
 		$.getJSON( belapiurl + "?langs=all", function(data) {
 			 var items = [];
@@ -25,6 +26,7 @@ jQuery( function( $ ) {
 		$("#docs-lang-select").change(function(){
 			$.fn.get_docs($(this).val(), prod);
 		});
+		$.fn.get_docs(belapiland, prod);
 	}
 	/* languages for product documentation */
 
