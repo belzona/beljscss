@@ -26,7 +26,7 @@ jQuery( function( $ ) {
 		$("#docs-lang-select").change(function(){
 			$.fn.get_docs($(this).val(), prod);
 		});
-		$("#docs-lang-select").val(dlang).change();
+		$("#docs-lang-select").val("us").change();
 	}
 	/* languages for product documentation */
 
