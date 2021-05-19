@@ -9,6 +9,7 @@ jQuery( function( $ ) {
 	if($(".single-product_information").length){
 		$("#menu-item-95").addClass("current-menu-ancestor current-menu-parent");
 	}
+	
 	/* languages for product documentation */
 	if($(".single-product_information").length){
 		var belapiurl = $("#belapiurl").text();
@@ -23,12 +24,13 @@ jQuery( function( $ ) {
 			  /* load languages into select element */
 			  $("#docs-lang-select").html(items.join( "" ));  
 		});
+		/* add function to language selector */
 		$("#docs-lang-select").change(function(){
 			$.fn.get_docs($(this).val(), prod);
-		});
-		setTimeout(function(){ 
+		}).val("us").change();
+		/* setTimeout(function(){ 
 			$("#docs-lang-select").val("us").change();
-		}, 1000);
+		}, 1000); */
 	}
 	/* languages for product documentation */
 
