@@ -27,7 +27,7 @@ jQuery( function( $ ) {
 			/* add function to language selector */
 			$("#docs-lang-select").change(function(){
 				$.fn.get_docs($(this).val(), prod);
-			}).val("us").change();
+			}).val($("#bel_dlang").text()).change();
 		});
 	}
 	/* languages for product documentation */
