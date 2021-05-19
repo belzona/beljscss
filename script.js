@@ -23,11 +23,12 @@ jQuery( function( $ ) {
 			  });
 			  /* load languages into select element */
 			  $("#docs-lang-select").html(items.join( "" ));  
+		}).done(function(){
+			/* add function to language selector */
+			$("#docs-lang-select").change(function(){
+				$.fn.get_docs($(this).val(), prod);
+			}).val("us").change();
 		});
-		/* add function to language selector */
-		$("#docs-lang-select").change(function(){
-			$.fn.get_docs($(this).val(), prod);
-		}).val(belapilang).change();
 	}
 	/* languages for product documentation */
 
