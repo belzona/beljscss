@@ -26,7 +26,7 @@ jQuery( function( $ ) {
 		$("#docs-lang-select").change(function(){
 			$.fn.get_docs($(this).val(), prod);
 		});
-		$.fn.get_docs(belapilang, prod);
+		//$.fn.get_docs(belapilang, prod);
 	}
 	/* languages for product documentation */
 
