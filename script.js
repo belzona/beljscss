@@ -27,6 +27,7 @@ jQuery( function( $ ) {
 			/* add function to language selector */
 			$("#docs-lang-select").change(function(){
 				$.fn.get_docs($(this).val(), prod);
+				document.cookie = "doclang=" + $(this).val();
 			}).val($("#bel_dlang").text()).change();
 		});
 	}
