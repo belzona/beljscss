@@ -14,6 +14,7 @@ jQuery( function( $ ) {
 	if($(".single-product_information").length){
 		var belapiurl = $("#belapiurl").text();
 		var belapilang = $("#bel_dlang").text();
+		var docLang = getCookie("doclang");
 		var prod = $("#prod_number").val();
 		$.getJSON( belapiurl + "?langs=all", function(data) {
 			 var items = [];
@@ -25,10 +26,20 @@ jQuery( function( $ ) {
 			  $("#docs-lang-select").html(items.join( "" ));  
 		}).done(function(){
 			/* add function to language selector */
-			$("#docs-lang-select").change(function(){
-				$.fn.get_docs($(this).val(), prod);
-				document.cookie = "doclang=" + $(this).val();
-			}).val($("#bel_dlang").text()).change();
+			if(docLang != "undefined" || docLang != "")
+			{
+				$("#docs-lang-select").change(function(){
+					$.fn.get_docs($(this).val(), prod);
+					document.cookie = "doclang=" + $(this).val();
+				}).val(docLang).change();
+			}
+			else
+			{
+				$("#docs-lang-select").change(function(){
+					$.fn.get_docs($(this).val(), prod);
+					document.cookie = "doclang=" + $(this).val();
+				}).val($("#bel_dlang").text()).change();
+			}
 		});
 	}
 	/* languages for product documentation */
