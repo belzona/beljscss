@@ -42,19 +42,20 @@ jQuery( function( $ ) {
 			  $("#docs-lang-select").html(items.join( "" ));  
 		}).done(function(){
 			/* add function to language selector */
-			if(docLang != "undefined" || docLang != "")
+			if(docLang?.trim().length > 0)
 			{
 				$("#docs-lang-select").change(function(){
 					$.fn.get_docs($(this).val(), prod);
 					document.cookie = "doclang=" + $(this).val();
-				}).val(docLang).change();
+				}).val($("#bel_dlang").text()).change();
+				
 			}
 			else
 			{
 				$("#docs-lang-select").change(function(){
 					$.fn.get_docs($(this).val(), prod);
 					document.cookie = "doclang=" + $(this).val();
-				}).val($("#bel_dlang").text()).change();
+				}).val(docLang).change();
 			}
 		});
 	}
