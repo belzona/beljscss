@@ -42,18 +42,22 @@ jQuery( function( $ ) {
 			  $("#docs-lang-select").html(items.join( "" ));  
 		}).done(function(){
 			/* add function to language selector */
+			let cdate = new Date();
+			cdate.setTime(cdate.getTime() + (expDays * 24 * 60 * 60 * 1000));
+			const expires = "expires=" + cdate.toUTCString();
+			
 			if(docLang?.trim().length > 0)
 			{
 				$("#docs-lang-select").change(function(){
 					$.fn.get_docs($(this).val(), prod);
-					document.cookie = "doclang=" + $(this).val();
+					document.cookie = "doclang=" + $(this).val() + "; " + expires + "; path=/";
 				}).val(docLang).change();
 			}
 			else
 			{
 				$("#docs-lang-select").change(function(){
 					$.fn.get_docs($(this).val(), prod);
-					document.cookie = "doclang=" + $(this).val();
+					document.cookie = "doclang=" + $(this).val() + "; " + expires + "; path=/";
 				}).val($("#bel_dlang").text()).change();
 			}
 		});
