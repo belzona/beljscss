@@ -43,7 +43,7 @@ jQuery( function( $ ) {
 		}).done(function(){
 			/* add function to language selector */
 			let cdate = new Date();
-			cdate.setTime(cdate.getTime() + (expDays * 24 * 60 * 60 * 1000));
+			cdate.setTime(cdate.getTime() + (365 * 24 * 60 * 60 * 1000));
 			const expires = "expires=" + cdate.toUTCString();
 			
 			if(docLang?.trim().length > 0)
