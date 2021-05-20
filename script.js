@@ -47,15 +47,14 @@ jQuery( function( $ ) {
 				$("#docs-lang-select").change(function(){
 					$.fn.get_docs($(this).val(), prod);
 					document.cookie = "doclang=" + $(this).val();
-				}).val($("#bel_dlang").text()).change();
-				
+				}).val(docLang).change();
 			}
 			else
 			{
 				$("#docs-lang-select").change(function(){
 					$.fn.get_docs($(this).val(), prod);
 					document.cookie = "doclang=" + $(this).val();
-				}).val(docLang).change();
+				}).val($("#bel_dlang").text()).change();
 			}
 		});
 	}
