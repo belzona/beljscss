@@ -3,8 +3,8 @@
     searchForm.FormElements.populateChemicalImmersionTypes();
 
     var resultsObj = new Results(null);
-    resultsObj.tableLayout = 0;
-    resultsObj.setResultsRowHeadTemplate();
+        resultsObj.tableLayout = 0;
+        resultsObj.setResultsRowHeadTemplate();
 
         var setResultsTemplate = function (e) {
             var chkElement = e.target;
@@ -15,7 +15,7 @@
 
         var resultsBody = document.getElementById('resultsBody');
         if (resultsBody) {
-        resultsBody.innerHTML = "";
+            resultsBody.innerHTML = "";
         }
 
         var formObjs = new FormElements(null);
@@ -30,7 +30,7 @@
 
         if (data) {
 
-        resultsObj.setResultsRowHeadTemplate();
+            resultsObj.setResultsRowHeadTemplate();
 
             if (resultsBody) {
 
@@ -56,7 +56,7 @@
                 }// end for
 
                 if (storageObj.localStorageAvailable()) {
-        storageObj.setLastUsedCasNumbers();
+                    storageObj.setLastUsedCasNumbers();
                     document.getElementById('lnkRestoreCasNumbers').style.display = 'block';
                 }
             }
@@ -64,7 +64,7 @@
 
         var spnResultsNumber = document.getElementById('numResults');
         if (spnResultsNumber) {
-        spnResultsNumber.innerHTML = numResults;
+            spnResultsNumber.innerHTML = numResults;
         }
     }
 
@@ -84,23 +84,23 @@
             var form = document.getElementById("frmSearch");
             if (form) {
 
-        sendFormJSONPostRequest(form, searchForm.serviceURL_ChemicalSearch + 'getSearch', function (data) {
-            console.log(data);
-            searchForm.Results.destroyResultsTable();
+                sendFormJSONPostRequest(form, searchForm.serviceURL_ChemicalSearch + 'getSearch', function (data) {
+                    console.log(data);
+                    searchForm.Results.destroyResultsTable();
 
-            populateSearchResults(data ?? null);
+                    populateSearchResults(data ?? null);
 
-            searchForm.Results.initialiseResultsTable();
-        });
+                    searchForm.Results.initialiseResultsTable();
+                });
             }
 
         } else {
 
-        populateSearchResults(null);
+            populateSearchResults(null);
 
             let errLen = formErrors.length;
-            for (let i = 0; i < errLen; {
-        divErrors.innerHTML += "<br />* " + formErrors[i];
+            for (let i = 0; i < errLen; i++) {
+                divErrors.innerHTML += "<br />* " + formErrors[i];
             }
         }
     }
@@ -109,7 +109,7 @@
         var element = document.getElementById("btnSearch");
         //Add a event listener to all of the save/update buttons
         if (element) {
-        element.addEventListener('click', getSearchResults, false);
+            element.addEventListener('click', getSearchResults, false);
         }
     }
 
@@ -117,7 +117,7 @@
         var element = document.getElementById("templateid");
         //Add a event listener to template selector
         if (element) {
-        element.addEventListener('click', setResultsTemplate, false);
+            element.addEventListener('click', setResultsTemplate, false);
         }
     }
 
@@ -125,5 +125,4 @@
     setupTemplateEventListener();
     setupSearchEventListener();
 
-    if (searchForm.Storage.casNumberHaveBeenStored()) {document.getElementById('lnkRestoreCasNumbers').style.display = 'block'; }
-
+    if (searchForm.Storage.casNumberHaveBeenStored()) { document.getElementById('lnkRestoreCasNumbers').style.display = 'block'; }
