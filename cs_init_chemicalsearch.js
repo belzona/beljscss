@@ -99,7 +99,8 @@
             populateSearchResults(null);
 
             let errLen = formErrors.length;
-            for (let i = 0; i < errLen; i++) {
+            for (let i = 0; i < errLen; i++)
+            {
                 divErrors.innerHTML += "<br />* " + formErrors[i];
             }
         }
