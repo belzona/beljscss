@@ -1,4 +1,3 @@
-<script type="text/javascript">
     var searchForm = new ChemicalSearchForm();
     searchForm.FormElements.populateProductTypes();
     searchForm.FormElements.populateChemicalImmersionTypes();
@@ -128,4 +127,3 @@
 
     if (searchForm.Storage.casNumberHaveBeenStored()) {document.getElementById('lnkRestoreCasNumbers').style.display = 'block'; }
 
-</script>
