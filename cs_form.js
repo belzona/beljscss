@@ -1,7 +1,8 @@
 function ChemicalSearchForm() {
 
     //this.serviceURL_ChemicalSearch = "http://localhost:9476/ChemicalSearch/";
-    this.serviceURL_ChemicalSearch = "http://dev.api.belzona.com/ChemicalSearch/"
+    //this.serviceURL_ChemicalSearch = "http://dev.api.belzona.com/ChemicalSearch/";
+    this.serviceURL_ChemicalSearch = "https://api.belzona.com/ChemicalSearch/";
     this.Validation = new Validation(this);
     this.FormElements = new FormElements(this);
     this.Storage = new Storage();
