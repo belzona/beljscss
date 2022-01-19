@@ -22,7 +22,7 @@ body, .nav-tabs .nav-link.active {
     color: #004687;
 }
 
-#frmSearch, #frmSearch select, #frmSearch button, #tableResults_length, #tableResults_length select, #tableResults_filter, #tableResults_filter input{
+#frmSearch, #frmSearch select, #frmSearch button, #tableResults_length, .dataTables_length select, #tableResults_filter, #tableResults_filter input{
     font-size: 14px;
 }
 
