@@ -64,10 +64,10 @@ body, .nav-tabs .nav-link.active {
     color: #fff;
     /*background-color: #C746D4;*/
     border: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 3px;
-    border-radius: 3px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-right: 3px !important;
+    border-radius: 3px !important;
 }
 
     .purple-button:hover {
