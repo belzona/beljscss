@@ -22,8 +22,8 @@ body, .nav-tabs .nav-link.active {
     color: #004687;
 }
 
-#frmSearch{
-    font-sixe: 14px !important;
+#frmSearch, #frmSearch select{
+    font-size: 14px;
 }
 
 .blog_item {
