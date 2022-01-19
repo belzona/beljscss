@@ -22,6 +22,10 @@ body, .nav-tabs .nav-link.active {
     color: #004687;
 }
 
+#frmSearch{
+    font-sixe: 14px;
+}
+
 .blog_item {
     border: solid 1px #f5f2f2;
 }
@@ -247,25 +251,10 @@ hr.menu-item-seperator {
 }
 
 
-.cv-photo {
-    width: 170px;
-    height: 170px;
-    border: solid 1px #ccc;
-    padding: 3px;
-    border-radius: 7px;
-}
-
-
 .alert-info {
     background-color: #f4feff;
 }
 
-.copy-to-cv-row,
-.alert-cvsafe {
-    color: #155724;
-    background-color: #fbf6fd;
-    border-color: #c3e6cb;
-}
 
 .table-condensed tr td {
     padding: 4px 5px 4px 5px;
