@@ -23,7 +23,7 @@ body, .nav-tabs .nav-link.active {
 }
 
 #frmSearch{
-    font-sixe: 14px;
+    font-sixe: 14px !important;
 }
 
 .blog_item {
