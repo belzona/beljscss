@@ -228,6 +228,16 @@ hr.menu-item-seperator {
     background-position: center center;
 }
 
+.text-left {
+    text-align: left!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.text-right {
+    text-align: right!important;
+}
+
 .normal-text {
     color: #333;
 }
