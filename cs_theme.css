@@ -239,6 +239,7 @@ hr.menu-item-seperator {
 }
 
 .normal-text {
+    font-weight: normal;
     color: #333;
 }
 
