@@ -297,11 +297,11 @@ hr.menu-item-seperator {
 
 .href {
     color: #004687;
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
     .href:hover {
         color: #f44a40;
-        text-decoration: underline;
+        text-decoration: underline !important;
     }
     
