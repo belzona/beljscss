@@ -77,9 +77,6 @@ body, .nav-tabs .nav-link.active {
     }
 
 .purple-bg {
-    /*
-            background-color: #8f1bdc;
-        */
     background-image: -moz-linear-gradient(90deg, #e78ae9 0%, #926ef8 100%);
     background-image: -webkit-linear-gradient( 90deg, #e78ae9 0%, #926ef8 100%);
     background-image: -ms-linear-gradient(90deg, #e78ae9 0%, #926ef8 100%);
@@ -107,7 +104,6 @@ body, .nav-tabs .nav-link.active {
 
 .cv-section-card-header {
     padding: 7px 15px 7px 10px;
-    /*    background-color: #8f1bdc;*/
 }
 
     .cv-section-card-header h5 button, h2 button {
@@ -183,12 +179,6 @@ a i, button i.fa {
         background-color: #8f1bdc;
     }
 
-/*.section-list-item-delete {
-    color: #ff0000;
-    padding:5px;
-    margin-left:10px;
-}*/
-
 .section-list-item-delete {
     color: #fff;
     /* padding: 5px; */
@@ -203,8 +193,6 @@ a i, button i.fa {
         background-color: #fa6c5d;
     }
 
-
-
 .highlite-card {
     border-color: #C746D4;
 }
@@ -218,6 +206,7 @@ hr.menu-item-seperator {
     margin: 10px 0;
 }
 
+/**
 .delete-icon {
     background-image: url(/assets/img/shape/form_icon_bin.png);
     background-repeat: no-repeat;
@@ -235,6 +224,7 @@ hr.menu-item-seperator {
     background-repeat: no-repeat;
     background-position: center center;
 }
+**/
 
 .text-left {
     text-align: left!important;
