@@ -15,6 +15,10 @@ body, .nav-tabs .nav-link.active {
     font-size: 14px;
 }
 
+.dataTables_length label {
+    font-weight: normal;
+}
+
 #tableResults_length{
     width: auto;
 }
