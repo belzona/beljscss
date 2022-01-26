@@ -15,6 +15,10 @@ body, .nav-tabs .nav-link.active {
     font-size: 14px;
 }
 
+#tableResults_length{
+    width: auto;
+}
+
 .blog_item {
     border: solid 1px #f5f2f2;
 }
