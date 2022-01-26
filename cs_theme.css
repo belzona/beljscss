@@ -19,7 +19,7 @@ body, .nav-tabs .nav-link.active {
     font-weight: normal;
 }
 
-#tableResults_length{
+.dataTables_length select{
     width: auto;
 }
 
