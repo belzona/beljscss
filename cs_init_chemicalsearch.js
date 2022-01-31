@@ -149,6 +149,15 @@
             element.addEventListener('click', setResultsTemplate, false);
         }
     }
+    
+    var setupDownloadEventListener = function () {
+        var element = document.getElementById("dloadXFile");
+        //Add a event listener for the download buttton
+        if (element) {
+            element.addEventListener('click', getDownloadFile, false);
+        }
+    }    
+    
 
     console.log(searchForm.Events);
     setupTemplateEventListener();
