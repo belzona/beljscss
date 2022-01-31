@@ -174,7 +174,7 @@ function JSON2CSV(JsonArray) {
         , "Formulation #"
         , "Chemical"
         , "Temperature C / F"
-        , "concentration %"
+        , "Concentration %"
         , "Rating"
         , "Definition"
     ];
