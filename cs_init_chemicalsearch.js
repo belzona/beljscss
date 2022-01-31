@@ -32,6 +32,7 @@
         if (data) {
 
             resultsObj.setResultsRowHeadTemplate();
+            document.getElementById('resultsFooter').style.display = 'block';
 
             if (resultsBody) {
 
@@ -61,6 +62,8 @@
                     document.getElementById('lnkRestoreCasNumbers').style.display = 'block';
                 }
             }
+        }else{
+            document.getElementById('resultsFooter').style.display = 'none';
         }
 
         var spnResultsNumber = document.getElementById('numResults');
