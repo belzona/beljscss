@@ -169,7 +169,16 @@
 
 function JSON2CSV(JsonArray) {
 
-    var JsonFields = ["cas_formula", "cas_name", "cas_number", "concentration", "formulation_number", "name", "number", "post_cure", "product_id", "rating_code", "rating_description", "rating_key", "temperature", "temperature_f"];
+    var JsonFields = [
+        "Product"
+        , "Formulation #"
+        , "Chemical"
+        , "Temperature C / F"
+        , "concentration %"
+        , "Rating"
+        , "Definition"
+    ];
+
     var csvStr = JsonFields.join(",") + "\n";
 
     JsonArray.forEach(element => {
@@ -189,23 +198,17 @@ function JSON2CSV(JsonArray) {
         temperature = element.temperature;
         temperature_f = element.temperature_f;
 
-
-        csvStr += cas_formula
+        csvStr += number
+            + ', FN' + formulation_number 
             + ',' + cas_name
-            + ',' + cas_number
+            + ',' + temperature + ' C /' + Number(temperature_f) + ' F '
             + ',' + concentration
-            + ',' + formulation_number
-            + ',' + name
-            + ',' + number
-            + ',' + post_cure
-            + ',' + product_id
             + ',' + rating_code
-            + ',' + rating_description
-            + ',' + rating_key
-            + ',' + temperature
-            + ',' + temperature_f
+            + ',' + (post_cure == '1' ? '** Post cured ** ' : '') + rating_description
             + "\n";
+
     })
     return csvStr;
 }
+
 
