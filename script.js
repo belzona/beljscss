@@ -1,6 +1,12 @@
 jQuery( function( $ ) {
 /* breadcrumb */
-	if($(".single-belzona_report").length || $(".single-testing_report").length || $(".single-approval").length || $(".single-system_leaflet").length){
+	if(   $(".single-belzona_report").length 
+	   || $(".single-testing_report").length 
+	   || $(".single-approval").length 
+	   || $(".single-system_leaflet").length 
+	   || $(".single-technical-mailing").length
+	   || $(".single-know-how").length )
+	{
 		$("#menu-item-77").addClass("current-menu-ancestor current-menu-parent");
 	}
 	if($(".single-literature").length || $(".single-presentation").length || $(".single-e-mailing").length){
