@@ -4,7 +4,7 @@ jQuery( function( $ ) {
 		$("#menu-item-77").addClass("current-menu-ancestor current-menu-parent");
 	}
 	if($(".single-literature").length){
-		$("#menu-item-615").addClass("current-menu-ancestor current-menu-parent");
+		$("#menu-item-10621").addClass("current-menu-ancestor current-menu-parent");
 	}
 	if($(".single-product_information").length){
 		$("#menu-item-95").addClass("current-menu-ancestor current-menu-parent");
