@@ -3,7 +3,7 @@ jQuery( function( $ ) {
 	if($(".single-belzona_report").length || $(".single-testing_report").length || $(".single-approval").length || $(".single-system_leaflet").length){
 		$("#menu-item-77").addClass("current-menu-ancestor current-menu-parent");
 	}
-	if($(".single-literature").length){
+	if($(".single-literature").length || $(".single-presentation").length || $(".single-e-mailing").length){
 		$("#menu-item-10621").addClass("current-menu-ancestor current-menu-parent");
 	}
 	if($(".single-product_information").length){
