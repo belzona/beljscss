@@ -93,14 +93,14 @@ jQuery( function( $ ) {
 						docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + val.IF[0].doc_url + "\" download=\"" + val.formulation_number + "-ifu.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-lightbulb\"></i></span><span class=\"elementor-icon-list-text notranslate\">IFU</span></a><small>" + val.IF[0].doc_date + "</small></li>");
 					}
 					if(val.PSS){
-						docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + val.PSS[0].doc_url + "\" download=\"" + val.formulation_number + "-pss.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-flask\"></i></span><span class=\"elementor-icon-list-text\">PSS</span></a><small>" + val.PSS[0].doc_date + "</small></li>");
+						docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + val.PSS[0].doc_url + "\" download=\"" + val.formulation_number + "-pss.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-flask\"></i></span><span class=\"elementor-icon-list-text notranslate\">PSS</span></a><small>" + val.PSS[0].doc_date + "</small></li>");
 					}
 					if(val.CR){
-						docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + val.CR[0].doc_url + "\" download=\"" + val.formulation_number + "-crc.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-vial\"></i></span><span class=\"elementor-icon-list-text\">CRC</span></a><small>" + val.CR[0].doc_date + "</small></li>");
+						docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + val.CR[0].doc_url + "\" download=\"" + val.formulation_number + "-crc.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-vial\"></i></span><span class=\"elementor-icon-list-text notranslate\">CRC</span></a><small>" + val.CR[0].doc_date + "</small></li>");
 					}
 					if(val.SD){
 						$.each(val.SD, function(k,v){
-							docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + v.doc_url + "\" download=\"" + val.formulation_number + "-sds.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-exclamation-triangle\"></i></span><span class=\"elementor-icon-list-text\">" + v.doc_name + "</span></a><small>" + v.doc_date + "</small></li>");
+							docs.push("<li class=\"elementor-icon-list-item\"><a target=\"_blank\" href=\"" + v.doc_url + "\" download=\"" + val.formulation_number + "-sds.pdf\"><span class=\"elementor-icon-list-icon\"><i aria-hidden=\"true\" class=\"fas fa-exclamation-triangle\"></i></span><span class=\"elementor-icon-list-text notranslate\">" + v.doc_name + "</span></a><small>" + v.doc_date + "</small></li>");
 						});
 					}
 					docs.push("</div></div></div></div></div></ul>");
