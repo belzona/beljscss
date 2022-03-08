@@ -396,7 +396,13 @@ Results.prototype.resultsRowTemplate = function (rowDataItem) {
     switch (this.tableLayout) {
         case 1:
             rowTemplate = "<tr class=\"row_" + rowDataItem['rating_code'] + "\">"
-                + "<td scope=\"row\"  class=\"text-center\"  style=\"vertical-align: text-top;\">" + rowDataItem['number'] + "<br />(FN" + rowDataItem['formulation_number'] + ")</td>"
+//                + "<td scope=\"row\"  class=\"text-center\"  style=\"vertical-align: text-top;\">" + rowDataItem['number'] + "<br />(FN" + rowDataItem['formulation_number'] + ")</td>"
+                + "<td scope=\"row\"  class=\"text-center\"  style=\"vertical-align: text-top;\">"
+                + rowDataItem['number']
+                + "<br />FN"
+                + rowDataItem['formulation_number']
+                + " &nbsp(<a target='_blank' href='https://www.blzn.uk/document/product-document/" + rowDataItem['CRC_Document_Id'] +"' title='chemical resistance chart'>CRC</a>)"
+                + "</td>"                
                 + "<td  style=\"vertical-align: text-top;\">" + rowDataItem['cas_name']
                 + "<br/><strong>Temp.</strong> " + rowDataItem['temperature'] + '&#8451; / ' + Number(rowDataItem['temperature_f']) + "&#8457;"
                 + "<br/><strong>Conc.</strong> " + rowDataItem['concentration'] + "&#37;"
@@ -407,8 +413,12 @@ Results.prototype.resultsRowTemplate = function (rowDataItem) {
             break;
         default:
             rowTemplate = "<tr class=\"row_" + rowDataItem['rating_code'] + "\">"
-                + "<td scope=\"row\"  class=\"text-center\">" + rowDataItem['number'] + "<br />(FN" + rowDataItem['formulation_number'] + ")</td>"
-                + "<td>" + rowDataItem['cas_name'] + "</td>"
+                + "<td scope=\"row\"  class=\"text-center\"  style=\"vertical-align: text-top;\">"
+                + rowDataItem['number']
+                + "<br />FN"
+                + rowDataItem['formulation_number']
+                + " &nbsp(<a target='_blank' href='https://www.blzn.uk/document/product-document/" + rowDataItem['CRC_Document_Id'] +"' title='chemical resistance chart'>CRC</a>)"
+                + "</td>"                + "<td>" + rowDataItem['cas_name'] + "</td>"
                 + "<td class=\"text-center\">" + rowDataItem['temperature'] + '&#8451; / ' + Number(rowDataItem['temperature_f']) + "&#8457;</td>"
                 + "<td class=\"text-center\">" + rowDataItem['concentration'] + "</td>"
                 + "<td class=\"text-center\">" + rowDataItem['rating_code'] + "</td>"
