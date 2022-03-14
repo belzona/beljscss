@@ -70,9 +70,9 @@ Validation.prototype.validateCasNumber = function (orderNumber, allowEmpty) {
 
     if (isNaN(Number(casParts.cas_input_1.value)) || isNaN(Number(casParts.cas_input_2.value)) || isNaN(Number(casParts.cas_input_3.value))) { return false; }
 
-    if (Number(casParts.cas_input_1.value) <= 0 || Number(casParts.cas_input_1.value) > 9999999) { return false; }
-    if (Number(casParts.cas_input_2.value) <= 0 || Number(casParts.cas_input_2.value) > 99) { return false; }
-    if (Number(casParts.cas_input_3.value) <= 0 || Number(casParts.cas_input_3.value) > 9) { return false; }
+    if (Number(casParts.cas_input_1.value) < 0 || Number(casParts.cas_input_1.value) > 9999999) { return false; }
+    if (Number(casParts.cas_input_2.value) < 0 || Number(casParts.cas_input_2.value) > 99) { return false; }
+    if (Number(casParts.cas_input_3.value) < 0 || Number(casParts.cas_input_3.value) > 9) { return false; }
 
     return true;
 }
