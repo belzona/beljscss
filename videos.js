@@ -1,8 +1,8 @@
 jQuery( function( $ ) {
   if($(".single-belzona_video").length)
   {
-    $("#dwnbtn").click(function(){
-      window.open($("#dwnbtn").attr("href"), "_self");
+    $("#dwnvid").click(function(){
+      window.open($("#dwnvid").attr("href"), "_self");
     });
   }
 });
