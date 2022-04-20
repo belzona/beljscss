@@ -226,6 +226,10 @@ hr.menu-item-seperator {
 }
 **/
 
+.font-weight-bold {
+    font-weight: 700!important;
+}
+
 .text-left {
     text-align: left!important;
 }
