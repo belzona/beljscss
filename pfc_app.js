@@ -78,8 +78,8 @@ var getFatigueStressVals = function (e) {
                         resultsHTML += "<strong>Frequency:&nbsp;</strong><span class='text-danger font-weight-bold	'> " + resultsJSON[i]["TestFrequency"] + " </span><span class='small'>(Hz)</span><br/>";
                         resultsHTML += "<strong>Mean Stress:&nbsp;</strong> " + resultsJSON[i]["MeanStress"] + " <span class='small'>(MPa)</span><br/>";
                         resultsHTML += "<strong>Stress Amplitude:&nbsp;</strong> " + resultsJSON[i]["StressAmplitutde"] + " <span class='small'>(MPa)</span><br/>";
-                        resultsHTML += "<strong>Lower Stress:&nbsp;</strong><span class='text-danger font-weight-bold'>" + resultsJSON[i]["LowerStress"] +  " </span><span class='small'>(MPa)</span><br/>";
-                        resultsHTML += "<strong>Upper Stress:&nbsp;</strong><span class='text-danger font-weight-bold'> " + resultsJSON[i]["UpperStress"] + " </span><span class='small'>(MPa)</span><br/>";
+                        resultsHTML += "<strong>Lower Stress:&nbsp;</strong><span class='text-danger font-weight-bold'>" + (Math.round((resultsJSON[i]["LowerStress"] + Number.EPSILON) * 100) / 100) +  " </span><span class='small'>(MPa)</span><br/>";
+                        resultsHTML += "<strong>Upper Stress:&nbsp;</strong><span class='text-danger font-weight-bold'> " + (Math.round((resultsJSON[i]["UpperStress"] + Number.EPSILON) * 100) / 100) + " </span><span class='small'>(MPa)</span><br/>";
                         resultsHTML += "</div>";
                     }
                 }
