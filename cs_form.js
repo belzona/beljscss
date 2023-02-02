@@ -401,7 +401,7 @@ Results.prototype.resultsRowTemplate = function (rowDataItem) {
                 + rowDataItem['number']
                 + "<br />FN"
                 + rowDataItem['formulation_number']
-                + " &nbsp(<a target='_blank' href='https://www.blzn.uk/document/product-document/" + rowDataItem['CRC_Document_Id'] +"' title='chemical resistance chart'>CRC</a>)"
+                + " &nbsp(<a target='_blank' href='https://prodapp.belzona.com/download/?docid=" + rowDataItem['CRC_Document_Id'] +"' title='chemical resistance chart'>CRC</a>)"
                 + "</td>"                
                 + "<td  style=\"vertical-align: text-top;\">" + rowDataItem['cas_name']
                 + "<br/><strong>Temp.</strong> " + rowDataItem['temperature'] + '&#8451; / ' + Number(rowDataItem['temperature_f']) + "&#8457;"
@@ -417,7 +417,7 @@ Results.prototype.resultsRowTemplate = function (rowDataItem) {
                 + rowDataItem['number']
                 + "<br />FN"
                 + rowDataItem['formulation_number']
-                + " &nbsp(<a target='_blank' href='https://www.blzn.uk/document/product-document/" + rowDataItem['CRC_Document_Id'] +"' title='chemical resistance chart'>CRC</a>)"
+                + " &nbsp(<a target='_blank' href='https://prodapp.belzona.com/download/?docid=" + rowDataItem['CRC_Document_Id'] +"' title='chemical resistance chart'>CRC</a>)"
                 + "</td>"                + "<td>" + rowDataItem['cas_name'] + "</td>"
                 + "<td class=\"text-center\">" + rowDataItem['temperature'] + '&#8451; / ' + Number(rowDataItem['temperature_f']) + "&#8457;</td>"
                 + "<td class=\"text-center\">" + rowDataItem['concentration'] + "</td>"
