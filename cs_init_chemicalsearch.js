@@ -21,9 +21,9 @@ var populateCASNameLabels = function (data) {
     var casInputValue3 = formObjs.getCasNumber(3);
 
     //Clear the existing CAS number labels 
-    formObjs.setCasNumberName(1, casInputValue1 == '' ? '' : 'Not found');
-    formObjs.setCasNumberName(2, casInputValue2 == '' ? '' : 'Not found');
-    formObjs.setCasNumberName(3, casInputValue3 == '' ? '' : 'Not found');
+    formObjs.setCasNumberName(1, casInputValue1 == '' ? '' : 'Not tested/found');
+    formObjs.setCasNumberName(2, casInputValue2 == '' ? '' : 'Not tested/found');
+    formObjs.setCasNumberName(3, casInputValue3 == '' ? '' : 'Not tested/found');
 
 
     if (data) {
