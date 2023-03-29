@@ -1,61 +1,3 @@
-
-function populateSearchResults (data) {
-
-    var resultsBody = document.getElementById('resultsBody');
-    if (resultsBody) {
-        resultsBody.innerHTML = "";
-    }
-
-    var formObjs = new FormElements(null);
-    var resultsObj = new Results(null);
-    var storageObj = new Storage(null);
-
-    //Get CAS numbers and CAS labels
-    var casInputValue1 = formObjs.getCasNumber(1);
-    var casInputValue2 = formObjs.getCasNumber(2);
-    var casInputValue3 = formObjs.getCasNumber(3);
-
-    var numResults = 0;
-
-    if (data) {
-        if (resultsBody) {
-
-            for (let item of data) {
-
-                //Set the CAS name labels
-                switch (item['cas_number']) {
-                    case casInputValue1:
-                        formObjs.setCasNumberName(1, item['cas_name']);
-                        break;
-                    case casInputValue2:
-                        formObjs.setCasNumberName(2, item['cas_name']);
-                        break;
-                    case casInputValue3:
-                        formObjs.setCasNumberName(3, item['cas_name']);
-                        break;
-                }
-
-                numResults++;
-                //Build the table row data
-                resultsBody.innerHTML += resultsObj.resultsRowTemplate(item);
-
-            }// end for
-
-            if (storageObj.localStorageAvailable()) {
-                storageObj.setLastUsedCasNumbers();
-                document.getElementById('lnkRestoreCasNumbers').style.display = 'block';
-            }
-        }
-    }
-
-    var spnResultsNumber = document.getElementById('numResults');
-    if (spnResultsNumber) {
-        spnResultsNumber.innerHTML = numResults;
-    }
-
-}
-
-
 function getJSON(JSONurl, callback) {
     var response = null;
     var request = new XMLHttpRequest();
@@ -109,8 +51,7 @@ function postForm(form, callback) {
     request.open(form.method, form.action, true);
     //request.send();
     request.send(data);
-}
-
+} 
 
 // convert the form to JSON
 // https://jordanfinners.dev/blogs/how-to-easily-convert-html-form-to-json
@@ -125,7 +66,6 @@ const getFormJSON = (form) => {
         return result;
     }, {});
 };
-
 
 function sendFormJSONPostRequest(form, actionUrl, callback) {
     //var data = new FormData(form);
