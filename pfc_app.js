@@ -38,6 +38,7 @@ function createDropDownListOption(ddVal, ddText) {
     return opt;
 }
 
+
 /** Validate the search form inputs */
 var validateSearchCriteria = function () {
 
@@ -75,8 +76,15 @@ var populateStressTestedProducts = function (e) {
             productDropdown.appendChild(createDropDownListOption('0','Select product...'));
 
             for (var i = 0; i < resultsJSON.length; i++) {
-                if (resultsJSON[i]["State"] == '1') {
-                    productDropdown.appendChild(createDropDownListOption(resultsJSON[i]["Id"], resultsJSON[i]["Description"]));
+                if (resultsJSON[i]["ProductFatigeTestDisplay"]) {
+                    //Create the dropdown option description
+                    var productDescription = resultsJSON[i]["Product"] + ' - ' + resultsJSON[i]["SurfacePreparationType"]
+                    //Create the dropdown option
+                    var ddOption = createDropDownListOption(resultsJSON[i]["ProductFatigueTestId"], productDescription);
+                    //Set the surface preparation type attribute of the dropdown option
+                    ddOption.setAttribute('data-spt', resultsJSON[i]["SurfacePreparationTypeId"]);
+                    //Add the dropdown option the the dropdown
+                    productDropdown.appendChild(ddOption);
                 }
             }
         }
@@ -144,6 +152,32 @@ var getFatigueStressVals = function (e) {
     }
 }
 
+var swapSurfacePreparationImages = function (e) {
+
+    e.preventDefault();
+
+    var dd = document.getElementById('productid');
+    var sptId = dd.options[dd.selectedIndex].getAttribute('data-spt');  
+    var imageToSwap = document.getElementById('imgFatigueCycleCalculator');
+    var imgSrc = '';
+
+    switch (sptId) {
+        case '1':
+            imgSrc = 'https://bel-library.s3.amazonaws.com/wp-content/uploads/2023/03/30090626/Fatigue-Cycle-Calculator.png';
+            break;
+        case '2':
+            imgSrc = 'https://bel-library.s3.amazonaws.com/wp-content/uploads/2023/03/30090634/Power-Tool-Prep.png';
+            break;
+        default:
+            imgSrc = 'https://bel-library.s3.amazonaws.com/wp-content/uploads/2023/03/30090626/Fatigue-Cycle-Calculator.png';
+            break;
+    }
+
+    imageToSwap.src = imgSrc;
+
+};
+
+
 var setupSearchListener = function () {
     var element = document.getElementById("btnSearch");
     //Add a event listener for the download buttton
@@ -152,5 +186,14 @@ var setupSearchListener = function () {
     }
 }
 
+var setupTestedProductDDListener = function () {
+    var element = document.getElementById("productid");
+    //Add a event listener for the product dropdown 
+    if (element) {
+        element.addEventListener('change', swapSurfacePreparationImages, false);
+    }
+}
+
 setupSearchListener();
 populateStressTestedProducts();
+setupTestedProductDDListener();
